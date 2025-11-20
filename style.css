@@ -132,7 +132,6 @@ p {
   gap: 0;
   justify-content: center;
 }
-
 .item img {
   max-width: 100%;
   height: 100vh;
@@ -159,10 +158,9 @@ p {
   border-right:1px solid #fff;
   margin: 0 20px ;
 }
-.about img {
-  filter: grayscale(100%);
+.about #map-about {
   height: 65vh;
-  width: 40vw;
+  width: 44vw;
   margin-top: 20vh;
   margin-left: 5vw;
   object-fit: cover;
@@ -185,6 +183,17 @@ p {
   position: absolute;
   color: #ffffff;
   top: 20%;
+  text-align: center;
+  z-index: 2;
+  margin-left: 50vw;
+  margin-right: 2vw;
+}
+.about h3 {
+  font-size: large;
+  font-weight: 100;
+  position: absolute;
+  color: #ffffff;
+  top: 37%;
   text-align: center;
   z-index: 2;
   margin-left: 50vw;
@@ -289,6 +298,8 @@ p a img:hover{
 	transform:scale(1.01);
 	transition:0.3s;
 }
+
+/* graffiti-page */
 .fade-in {
   opacity: 0;
   visibility: hidden;
@@ -302,9 +313,33 @@ p a img:hover{
 }
 section {
   max-width: 800px;
-  margin: 100px auto;
+  margin: 80px auto;
   padding: 0 20px;
 }
+.row {
+  display: flex;
+  justify-content: center;  /* 横方向の中央寄せ */
+  align-items: flex-start;  /* 上揃え */
+  gap: 10px;                /* 画像の間の余白 */
+  max-width: 800px;
+  margin: 100px auto;
+  flex-wrap: wrap;          /* 幅が狭い画面で折り返す */
+}
+.row .section {
+  flex: 1;
+  padding: 0;
+  margin: 0;
+}
+.row img {
+  width: 100%;
+  height: 80%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+
 
 /* ===== footer ===== */
 .footer {
@@ -468,7 +503,7 @@ section {
     border-right:1px solid #ffffff;
     margin: 0 10px ;
   }
-  .about img {
+  .about #map-about {
     margin-top: 7vh;
     margin-left: auto;
     margin-right: auto;
@@ -483,6 +518,11 @@ section {
     margin-left: 2vw;
     margin-right: 2vw;
     margin-top: 37vh;
+  }
+  .about h3 {
+    margin-left: 2vw;
+    margin-right: 2vw;
+    margin-top: 31vh;
   }
 
 
@@ -500,6 +540,11 @@ section {
   section {
     margin: 50px 10px;
     padding: 0 10px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 20px;
   }
 
   /* ギャラリー画像 */
