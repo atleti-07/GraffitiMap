@@ -37,17 +37,17 @@ if (mapContainer) {
 
   // マーカー情報（色も指定）
   const markers = [
-    { coords: [33.670222, 130.449667], image: 'images4/IMG_01.jpg', link:'graffiti01.html', color: 'blue' },
-    { coords: [33.663406, 130.444630], image: 'images4/IMG_03.jpg', link:'graffiti02.html', color: 'blue' },
-    { coords: [33.676850, 130.439193], image: 'images4/IMG_15.jpg', link:'graffiti05.html', color: 'blue' },
-    { coords: [33.667944, 130.443794], image: 'images4/IMG_25.jpg', link:'graffiti03.html', color: 'blue' },
-    { coords: [33.667460, 130.443007], image: 'images4/IMG_08.jpg', link:'graffiti04.html', color: 'blue' },
-    { coords: [33.672424, 130.451693], image: 'images4/IMG_43.jpg', link:'graffiti05.html', color: 'blue' },
-    { coords: [33.673477, 130.441488], image: 'images4/IMG_10.jpg', link:'graffiti06.html', color: 'blue' },
-    { coords: [33.669316, 130.443041], image: 'images4/IMG_09.jpg', link: null, color: 'red' },
-    { coords: [33.675269, 130.441798], image: 'images4/IMG_18.jpg', link: null, color: 'red' },
-    { coords: [33.667125, 130.442040], image: 'images4/IMG_59.jpg', link: null, color: 'red' },
-    { coords: [33.675965, 130.439774], image: 'images4/IMG_14.jpg', link: null, color: 'red' },
+    { coords: [33.670222, 130.449667], image: 'images2/IMG_01.webp', link:'graffiti01.html', color: 'blue' },
+    { coords: [33.663406, 130.444630], image: 'images2/IMG_03.webp', link:'graffiti02.html', color: 'blue' },
+    { coords: [33.676850, 130.439193], image: 'images2/IMG_15.webp', link:'graffiti05.html', color: 'blue' },
+    { coords: [33.667944, 130.443794], image: 'images2/IMG_25.jwebp', link:'graffiti03.html', color: 'blue' },
+    { coords: [33.667460, 130.443007], image: 'images2/IMG_08.webp', link:'graffiti04.html', color: 'blue' },
+    { coords: [33.672424, 130.451693], image: 'images2/IMG_43.webp', link:'graffiti05.html', color: 'blue' },
+    { coords: [33.673477, 130.441488], image: 'images2/IMG_10.webp', link:'graffiti06.html', color: 'blue' },
+    { coords: [33.669316, 130.443041], image: 'images2/IMG_09.webp', link: null, color: 'red' },
+    { coords: [33.675269, 130.441798], image: 'images2/IMG_18.webp', link: null, color: 'red' },
+    { coords: [33.667125, 130.442040], image: 'images2/IMG_59.webp', link: null, color: 'red' },
+    { coords: [33.675965, 130.439774], image: 'images2/IMG_14.webp', link: null, color: 'red' },
   ];
 
   markers.forEach((item) => {
