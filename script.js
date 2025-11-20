@@ -11,36 +11,76 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // === Leaflet 地図 ===
   const mapContainer = document.getElementById("map");
-  if (mapContainer) {
-    const map = L.map("map").setView([33.67074368477472, 130.44459982368008], 15);
+if (mapContainer) {
+  const map = L.map("map").setView([33.67074368477472, 130.44459982368008], 15);
 
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
 
-    const markers = [
-      { coords: [33.670222, 130.449667], image: 'images4/IMG_01.jpg', link:'graffiti01.html'},
-      { coords: [33.663406, 130.444630], image: 'images4/IMG_03.jpg', link:'graffiti02.html'},
-      { coords: [33.676850, 130.439193], image: 'images4/IMG_15.jpg', link:'graffiti05.html'},
-      { coords: [33.667944, 130.443794], image: 'images4/IMG_25.jpg', link:'graffiti03.html'},
-      { coords: [33.667460, 130.443007], image: 'images4/IMG_08.jpg', link:'graffiti04.html'},
-      { coords: [33.672424, 130.451693], image: 'images4/IMG_43.jpg', link:'graffiti05.html'},
-      { coords: [33.673477, 130.441488], image: 'images4/IMG_10.jpg', link:'graffiti06.html'},
-    ];
+  // アイコン定義
+  const iconUrls = {
+    blue: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
+    red: "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png"
+  };
 
-    markers.forEach((item) => {
-      const marker = L.marker(item.coords).addTo(map);
-      const popupContent = `
-        <div>
-          <a href="${item.link || '#'}" target="_blank">
-            <img src="${item.image}" alt="Location Image" class="popup-img">
-          </a>
-        </div>
-      `;
-      marker.bindPopup(popupContent);
+  function createIcon(color) {
+    return new L.Icon({
+      iconUrl: iconUrls[color],
+      shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+      shadowSize: [41, 41]
     });
   }
+
+  // マーカー情報（色も指定）
+  const markers = [
+    { coords: [33.670222, 130.449667], image: 'images4/IMG_01.jpg', link:'graffiti01.html', color: 'blue' },
+    { coords: [33.663406, 130.444630], image: 'images4/IMG_03.jpg', link:'graffiti02.html', color: 'blue' },
+    { coords: [33.676850, 130.439193], image: 'images4/IMG_15.jpg', link:'graffiti05.html', color: 'blue' },
+    { coords: [33.667944, 130.443794], image: 'images4/IMG_25.jpg', link:'graffiti03.html', color: 'blue' },
+    { coords: [33.667460, 130.443007], image: 'images4/IMG_08.jpg', link:'graffiti04.html', color: 'blue' },
+    { coords: [33.672424, 130.451693], image: 'images4/IMG_43.jpg', link:'graffiti05.html', color: 'blue' },
+    { coords: [33.673477, 130.441488], image: 'images4/IMG_10.jpg', link:'graffiti06.html', color: 'blue' },
+    { coords: [33.669316, 130.443041], image: 'images4/IMG_09.jpg', link: null, color: 'red' },
+    { coords: [33.675269, 130.441798], image: 'images4/IMG_18.jpg', link: null, color: 'red' },
+    { coords: [33.667125, 130.442040], image: 'images4/IMG_59.jpg', link: null, color: 'red' },
+    { coords: [33.675965, 130.439774], image: 'images4/IMG_14.jpg', link: null, color: 'red' },
+  ];
+
+  markers.forEach((item) => {
+    const marker = L.marker(item.coords, { icon: createIcon(item.color) }).addTo(map);
+  
+    if (item.image) {
+      let popupContent;
+      
+      if (item.color === 'red') {
+        // 赤マーカー
+        popupContent = `
+          <div>
+            <img src="${item.image}" alt="Location Image" class="popup-img">
+          </div>
+        `;
+      } else {
+        // 青マーカー
+        popupContent = `
+          <div>
+            <a href="${item.link}" target="_blank">
+              <img src="${item.image}" alt="Location Image" class="popup-img">
+            </a>
+          </div>
+        `;
+      }
+  
+      marker.bindPopup(popupContent);
+    }
+  });
+}
+
 });
+
 
 // === Swiper スライダー ===
 const swiper = new Swiper(".mySwiper", {
