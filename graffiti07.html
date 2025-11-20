@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graffiti Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style02.css">
+
+</head>
+<body class="graffiti">
+ <header class="header">
+  <h1 class="title"><a href="index.html"><img src="images/graffitimap-logo.png" alt=""></a></h1>
+
+
+     <!-- ハンバーガーアイコン -->
+     <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul id="nav" class="nav-list">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="map.html">MAP</a></li>
+      <li><a href="gallery.html">GALLERY</a></li>
+    </ul>
+ </header>
+     <!-- ファーストビュー -->
+     <section class="main-visual">
+        <img src="images2/IMG_43.webp" alt="メインビジュアル">
+        <p>Date:2025/05/22</p>
+        <p>Latitude:33.670, Longitude:130.449</p>
+      </section>
+      <section class="section fade-in">
+        <img src="images2/IMG_46.webp" alt="サブ画像1">
+        <p>Date:2025/08/17</p>
+      </section>
+      <section class="section fade-in">
+        <img src="images2/IMG_44.webp" alt="サブ画像2">
+        <p>Date:2025/08/17</p>
+      </section>
+      <section class="section fade-in">
+        <img src="images2/IMG_45.webp" alt="サブ画像2">
+        <p>Date:2025/08/17</p>
+      </section>
+      </section>
+    </section>  
+      
+    
+      <section class="section fade-in">
+        <div id="map"></div>
+      </section>
+     <!-- <script src="script.js"></script>-->
+      <script src="script2.js"></script>
+      <footer class="footer">
+        <div class="footer-inner">
+          <p class="footer-logo">Graffiti Map</p>
+          <ul class="footer-nav">
+            <li><a href="index.html" class="active">HOME</a></li>
+            <li><a href="map.html">MAP</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <!--<li><a href="about.html">ABOUT</a></li>-->
+          </ul>
+          <p class="copyright">© 2025 Graffiti Map around KSU.</p>
+        </div>
+      </footer>
+</body>
+</html>
