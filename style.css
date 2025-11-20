@@ -502,6 +502,7 @@ section {
     border-left:1px solid #ffffff;
     border-right:1px solid #ffffff;
     margin: 0 10px ;
+    margin-bottom: 180px;
   }
   .about #map-about {
     margin-top: 7vh;
@@ -522,7 +523,7 @@ section {
   .about h3 {
     margin-left: 2vw;
     margin-right: 2vw;
-    margin-top: 31vh;
+    margin-top: 36vh;
   }
 
 
