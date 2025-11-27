@@ -55,7 +55,6 @@ p {
   opacity: 1;
 }
 
-
 /*menu*/
 #nav {
   display: flex;
@@ -65,25 +64,6 @@ p {
   list-style: none;
   margin-right: 40px;
 }
-
-.hamburger {
-  display: none; /* PCでは非表示 */
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-  z-index: 1100;
-  position: relative;
-  margin-left: auto;
-  right: 30px;
-}
-.hamburger span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background: #ffffff; 
-  transition: 0.3s;
-}
-
 #nav li {
   display: inline-block;
   text-align: center;
@@ -106,12 +86,29 @@ p {
   cursor: default;
 }
 
+.hamburger {
+  display: none; /* PCでは非表示 */
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 1100;
+  position: relative;
+  margin-left: auto;
+  right: 30px;
+}
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #ffffff; 
+  transition: 0.3s;
+}
 .title {
   width: 200px;
   height: 10px;
   margin-top: 0;
 }
-/*mv*/
+
 .mv {
   width: 100%;
   position: relative;
@@ -193,11 +190,39 @@ p {
   font-weight: 100;
   position: absolute;
   color: #ffffff;
-  top: 37%;
+  top: 40%;
   text-align: center;
   z-index: 2;
   margin-left: 50vw;
   margin-right: 2vw;
+}
+.about h4 {
+  font-size: large;
+  font-weight: 100;
+  position: absolute;
+  color: #ffffff;
+  top: 70%;
+  text-align: center;
+  z-index: 2;
+  margin-left: 50vw;
+  margin-right: 2vw;
+}
+.about h4 img {
+  width: 20px;
+}
+.about h5 {
+  font-size: large;
+  font-weight: 100;
+  position: absolute;
+  color: #ffffff;
+  top: 76%;
+  text-align: center;
+  z-index: 2;
+  margin-left: 50vw;
+  margin-right: 2vw;
+}
+.about h5 img {
+  width: 20px;
 }
 
 .gallery h2 a {
@@ -206,14 +231,12 @@ p {
   font-size: 2.5rem;
 }
 
-/**/
 body {
   margin: 0;
   margin-left: auto;
   margin-right: auto; 
   background-color: #000;
 }
-
 body.gallery,
 body.map {
     margin: 0;
@@ -221,16 +244,13 @@ body.map {
     margin-left: auto;
     margin-right: auto; 
 }
-
 body a {
     text-decoration: none;
     color: black;
 }
-
 #photo {
     height: 300px;
  }
-
 ul li {
     list-style: none;
  }
@@ -337,6 +357,17 @@ section {
   object-fit: cover;
   object-position: center;
   display: block;
+}
+
+.map-link {
+  color: #fff;        /* 白文字 */
+  text-align: center; /* 中央寄せ */
+  margin: 40px 0;     /* 上下の余白 */
+  font-size: 2rem;    /* 文字サイズ */
+}
+.map-link a {
+  color: #fff;
+  text-decoration: underline; /* 好みで装飾 */
 }
 
 
@@ -452,7 +483,6 @@ section {
   #nav.active {
     display: flex; 
   }
-
   .hamburger {
     display: flex; 
   }
@@ -467,12 +497,10 @@ section {
   .hamburger.open span:nth-child(3) {
     transform: rotate(-45deg) translateY(-8px);
   }
-   
   #nav li a {
      color: #ffffff;
     padding: 10px 0;
   }
-
   .title {
     margin-top: 0px;
     margin-left: 0px;
@@ -525,14 +553,20 @@ section {
     margin-right: 2vw;
     margin-top: 36vh;
   }
-
+  .about h4 {
+    margin: 0 20px;
+    top: 115%;
+  }
+  .about h5 {
+    margin: 0 20px;
+    top: 122%;
+  }
 
   /* マップサイズ調整 */
   #map {
     width: 90%;
     height: 60vh;
   }
-
   .popup-img {
     width: 100%;
   }
@@ -542,7 +576,6 @@ section {
     margin: 50px 10px;
     padding: 0 10px;
   }
-
   .row {
     flex-direction: column;
     gap: 20px;
@@ -553,13 +586,8 @@ section {
     flex-direction: column;
     align-items: center;
   }
-
   .card-list {
     width: 90%;
     max-width: 100%;
   }
-
-  
 }
-
-
