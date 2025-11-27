@@ -4,15 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Graffiti Map</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-     crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-     crossorigin=""></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style02.css">
-
 </head>
 <body class="graffiti">
  <header class="header">
@@ -50,13 +42,28 @@
         <img src="images2/IMG_57.webp" alt="サブ画像2">
         <p>Date:2025/10/21</p>
       </section>
+
+      <h2 class="map-link"><a href="map.html?marker=5">MAPで見る</a></h2>
       
-    
-      <section class="section fade-in">
-        <div id="map"></div>
-      </section>
-     <!-- <script src="script.js"></script>-->
-      <script src="script2.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+      const fadeEls = document.querySelectorAll('.fade-in');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+
+      fadeEls.forEach(el => observer.observe(el));
+  });
+</script>
+
       <footer class="footer">
         <div class="footer-inner">
           <p class="footer-logo">Graffiti Map</p>
