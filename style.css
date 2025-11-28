@@ -361,15 +361,15 @@ section {
 
 .map-link {
   color: #fff;        /* 白文字 */
-  text-align: center; /* 中央寄せ */
-  margin: 40px 0;     /* 上下の余白 */
+  /*text-align: center; */
+  margin: 0px 0;     /* 上下の余白 */
   font-size: 2rem;    /* 文字サイズ */
 }
 .map-link a {
   color: #fff;
-  text-decoration: underline; /* 好みで装飾 */
+  margin-left: 70%;
+  text-decoration: underline; 
 }
-
 
 
 /* ===== footer ===== */
