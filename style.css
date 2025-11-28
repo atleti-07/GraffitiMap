@@ -361,13 +361,13 @@ section {
 
 .map-link {
   color: #fff;        /* 白文字 */
-  /*text-align: center; */
+  text-align: center;
   margin: 0px 0;     /* 上下の余白 */
   font-size: 2rem;    /* 文字サイズ */
 }
 .map-link a {
   color: #fff;
-  margin-left: 70%;
+  /*margin-left: 70%;*/
   text-decoration: underline; 
 }
 
