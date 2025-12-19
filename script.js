@@ -39,22 +39,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // === マーカー一覧（IDを付ける） ===
-    const markers = [
-      { id: 1, coords: [33.670222, 130.449667], image: 'images2/IMG_01.webp', link:'graffiti01.html', color: 'blue' },
-      { id: 2, coords: [33.663406, 130.444630], image: 'images2/IMG_03.webp', link:'graffiti02.html', color: 'blue' },
-      { id: 3, coords: [33.676850, 130.439193], image: 'images2/IMG_15.webp', link:'graffiti05.html', color: 'blue' },
-      { id: 4, coords: [33.667944, 130.443794], image: 'images2/IMG_25.webp', link:'graffiti03.html', color: 'blue' },
-      { id: 5, coords: [33.667460, 130.443007], image: 'images2/IMG_08.webp', link:'graffiti04.html', color: 'blue' },
-      { id: 6, coords: [33.672424, 130.451693], image: 'images2/IMG_43.webp', link:'graffiti05.html', color: 'blue' },
-      { id: 7, coords: [33.673477, 130.441488], image: 'images2/IMG_10.webp', link:'graffiti06.html', color: 'blue' },
+    // === マーカー一覧（IDを付ける） ===
+const markers = [
+  { id: 1, coords: [33.670222, 130.449667], image: 'images2/IMG_01.webp', link:'graffiti01.html', color: 'blue' },
+  { id: 2, coords: [33.663406, 130.444630], image: 'images2/IMG_03.webp', link:'graffiti02.html', color: 'blue' },
+  { id: 3, coords: [33.676850, 130.439193], image: 'images2/IMG_15.webp', link:'graffiti05.html', color: 'blue' },
+  { id: 4, coords: [33.667944, 130.443794], image: 'images2/IMG_25.webp', link:'graffiti03.html', color: 'blue' },
+  { id: 5, coords: [33.667460, 130.443007], image: 'images2/IMG_08.webp', link:'graffiti04.html', color: 'blue' },
+  { id: 6, coords: [33.672424, 130.451693], image: 'images2/IMG_43.webp', link:'graffiti05.html', color: 'blue' },
+  { id: 7, coords: [33.673477, 130.441488], image: 'images2/IMG_10.webp', link:'graffiti06.html', color: 'blue' },
 
-      // 赤マーカー（リンクなし）
-      { id: 8, coords: [33.669316, 130.443041], image: 'images2/IMG_09.webp', link: null, color: 'red' },
-      { id: 9, coords: [33.675269, 130.441798], image: 'images2/IMG_18.webp', link: null, color: 'red' },
-      { id: 10, coords: [33.667125, 130.442040], image: 'images2/IMG_59.webp', link: null, color: 'red' },
-      { id: 11, coords: [33.675965, 130.439774], image: 'images2/IMG_14.webp', link: null, color: 'red' },
-      { id: 12, coords: [33.675611, 130.435249], image: 'images2/IMG_64.webp', link: null, color: 'red' },
-    ];
+  // ↓ ここもすべて blue に変更
+  { id: 8,  coords: [33.669316, 130.443041], image: 'images2/IMG_09.webp', link: null, color: 'blue' },
+  { id: 9,  coords: [33.675269, 130.441798], image: 'images2/IMG_18.webp', link: null, color: 'blue' },
+  { id: 10, coords: [33.667125, 130.442040], image: 'images2/IMG_59.webp', link: null, color: 'blue' },
+  { id: 11, coords: [33.675965, 130.439774], image: 'images2/IMG_14.webp', link: null, color: 'blue' },
+  { id: 12, coords: [33.675611, 130.435249], image: 'images2/IMG_64.webp', link: null, color: 'blue' },
+];
+
 
     // === マーカーを追加 & markerObjects に保存 ===
     markers.forEach((item) => {
