@@ -74,7 +74,7 @@ const markers = [
         // 青（リンクあり）
         popupContent = `
           <div>
-            <a href="${item.link}" target="_blank">
+            <a href="${item.link}">
               <img src="${item.image}" class="popup-img">
             </a>
           </div>
