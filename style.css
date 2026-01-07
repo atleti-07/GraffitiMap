@@ -204,34 +204,6 @@ p {
   margin-left: 50vw;
   margin-right: 2vw;
 }
-.about h4 {
-  font-size: large;
-  font-weight: 100;
-  position: absolute;
-  color: #ffffff;
-  top: 70%;
-  text-align: center;
-  z-index: 2;
-  margin-left: 50vw;
-  margin-right: 2vw;
-}
-.about h4 img {
-  width: 20px;
-}
-.about h5 {
-  font-size: large;
-  font-weight: 100;
-  position: absolute;
-  color: #ffffff;
-  top: 76%;
-  text-align: center;
-  z-index: 2;
-  margin-left: 50vw;
-  margin-right: 2vw;
-}
-.about h5 img {
-  width: 20px;
-}
 
 .gallery h2 a {
   color: #FFF;
