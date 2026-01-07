@@ -204,6 +204,17 @@ p {
   margin-left: 50vw;
   margin-right: 2vw;
 }
+.about h4 {
+  font-size: large;
+  font-weight: 100;
+  position: absolute;
+  color: #ffffff;
+  top: 80%;
+  text-align: center;
+  z-index: 2;
+  margin-left: 74vw;
+  margin-right: 2vw;
+}
 
 .gallery h2 a {
   color: #FFF;
